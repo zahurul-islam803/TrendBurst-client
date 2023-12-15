@@ -6,7 +6,7 @@ const Navlinks = () => {
       <NavLink
         to="/"
         className={({ isActive }) =>
-          isActive ? "btn btn-primary btn-sm" : "btn btn-ghost btn-sm"
+          isActive ? "text-lg text-rose-500 underline mr-8" : "text-lg mr-8"
         }
       >
         Home
@@ -14,10 +14,26 @@ const Navlinks = () => {
       <NavLink
         to="/products"
         className={({ isActive }) =>
-          isActive ? "btn btn-primary btn-sm" : "btn btn-ghost btn-sm"
+          isActive ? "text-lg text-rose-500 underline mr-8" : "text-lg mr-8"
         }
       >
         Products
+      </NavLink>
+      <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          isActive ? "text-lg text-rose-500 underline mr-8" : "text-lg mr-8"
+        }
+      >
+        About Us
+      </NavLink>
+      <NavLink
+        to="/contact"
+        className={({ isActive }) =>
+          isActive ? "text-lg text-rose-500 underline mr-8" : "text-lg mr-8"
+        }
+      >
+        Contact Us
       </NavLink>
     </>
   );
