@@ -41,7 +41,7 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="flex-1 justify-end">
-             <UserNav></UserNav>
+              <UserNav></UserNav>
             </div>
           </div>
           {/* Page content here */}
@@ -49,7 +49,7 @@ const Navbar = () => {
             <Outlet></Outlet>
           </div>
         </div>
-        <div className="drawer-side">
+        <div className="drawer-side z-10">
           <label
             htmlFor="my-drawer-3"
             aria-label="close sidebar"

@@ -1,0 +1,162 @@
+[
+  {
+    "product_name": "Comfortable Sun Glass",
+    "price": 59.99,
+    "category": "men",
+    "discount": 0.2,
+    "review": 4.5,
+    "product_img": "https://i.ibb.co/gj2tT25/7.jpg"
+  },
+  {
+    "product_name": "Stylish High Heels",
+    "price": 79.99,
+    "category": "woman",
+    "discount": 0.15,
+    "review": 4.2,
+    "product_img": "https://i.ibb.co/BzRfGtv/high-heel.jpg"
+  },
+  {
+    "product_name": "Kids Playful T-shirt",
+    "price": 19.99,
+    "category": "kids",
+    "discount": 0.1,
+    "review": 4.0,
+    "product_img": "https://i.ibb.co/Q8RHV41/kids-t-shirt.jpg"
+  },
+  {
+    "product_name": "Casual Men's Jeans",
+    "price": 49.99,
+    "category": "men",
+    "discount": 0.25,
+    "review": 4.7,
+    "product_img": "https://i.ibb.co/4j5gHM8/3.jpg"
+  },
+  {
+    "product_name": "Elegant Women's Hoody",
+    "price": 69.99,
+    "category": "woman",
+    "discount": 0.2,
+    "review": 4.8,
+    "product_img": "https://i.ibb.co/Pc3zG2K/16.jpg"
+  },
+  {
+    "product_name": "Colorful Kids Backpack",
+    "price": 29.99,
+    "category": "kids",
+    "discount": 0.12,
+    "review": 4.3,
+    "product_img": "https://i.ibb.co/sW0Sv9k/back-pack.jpg"
+  },
+  {
+    "product_name": "Sporty Men's Trimmer",
+    "price": 39.99,
+    "category": "men",
+    "discount": 0.18,
+    "review": 4.6,
+    "product_img": "https://i.ibb.co/Qc8ngWL/trimeer.jpg"
+  },
+  {
+    "product_name": "Formal Women's Dress",
+    "price": 49.99,
+    "category": "woman",
+    "discount": 0.15,
+    "review": 4.4,
+    "product_img": "https://i.ibb.co/LtP8rxK/10.jpg"
+  },
+  {
+    "product_name": "Playful Kids Shoes",
+    "price": 24.99,
+    "category": "kids",
+    "discount": 0.1,
+    "review": 4.1,
+    "product_img": "https://i.ibb.co/mtQ90LF/kids-shoes.jpg"
+  },
+  {
+    "product_name": "Classic Men's Watch",
+    "price": 89.99,
+    "category": "men",
+    "discount": 0.2,
+    "review": 4.9,
+    "product_img": "https://i.ibb.co/88Zp55R/watch.jpg"
+  },
+  {
+    "product_name": "Chic Women's Handbag",
+    "price": 59.99,
+    "category": "woman",
+    "discount": 0.18,
+    "review": 4.7,
+    "product_img": "https://i.ibb.co/Hz5jxgW/5.jpg"
+  },
+  {
+    "product_name": "Adorable Kids Pajamas",
+    "price": 34.99,
+    "category": "kids",
+    "discount": 0.12,
+    "review": 4.2,
+    "product_img": "https://i.ibb.co/PhjCGHr/kids-pajama.jpg"
+  },
+  {
+    "product_name": "Winter Men's Shirt",
+    "price": 79.99,
+    "category": "men",
+    "discount": 0.25,
+    "review": 4.5,
+    "product_img": "https://i.ibb.co/jM88Hwy/12.jpg"
+  },
+  {
+    "product_name": "Fancy Women's Earrings",
+    "price": 39.99,
+    "category": "woman",
+    "discount": 0.2,
+    "review": 4.8,
+    "product_img": "https://i.ibb.co/vQr2cTz/earing.jpg"
+  },
+  {
+    "product_name": "Fun Kids Coloring Book",
+    "price": 14.99,
+    "category": "kids",
+    "discount": 0.1,
+    "review": 4.0,
+    "product_img": "https://i.ibb.co/7Rps2RV/book.jpg"
+  },
+  {
+    "product_name": "Casual Men's Sneakers",
+    "price": 54.99,
+    "category": "men",
+    "discount": 0.15,
+    "review": 4.6,
+    "product_img": "https://i.ibb.co/M69jytP/snackers.jpg"
+  },
+  {
+    "product_name": "Bohemian Women's Scarf",
+    "price": 29.99,
+    "category": "woman",
+    "discount": 0.18,
+    "review": 4.3,
+    "product_img": "https://i.ibb.co/7jh2vH4/scarf.jpg"
+  },
+  {
+    "product_name": "Playful Kids Toy Set",
+    "price": 19.99,
+    "category": "kids",
+    "discount": 0.12,
+    "review": 4.1,
+    "product_img": "https://i.ibb.co/ysjRSSm/kids-1.jpg"
+  },
+  {
+    "product_name": "Smart Men's Jacket",
+    "price": 69.99,
+    "category": "men",
+    "discount": 0.2,
+    "review": 4.7,
+    "product_img": "https://i.ibb.co/0qm5NVK/1.jpg"
+  },
+  {
+    "product_name": "Elegant Women's Shirt",
+    "price": 99.99,
+    "category": "woman",
+    "discount": 0.15,
+    "review": 4,
+    "product_img": "https://i.ibb.co/wSgqmHJ/6.jpg"
+  }
+]
