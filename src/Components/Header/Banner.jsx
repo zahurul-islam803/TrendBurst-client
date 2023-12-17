@@ -30,6 +30,7 @@ const Banner = () => {
           <div className="flex flex-col-reverse lg:flex-row-reverse justify-around items-center">
             <img
               src="https://i.postimg.cc/5y5G0xVV/slider-2-2.png"
+              className="h-[80vh]"
               alt="banner"
             />
             <div className="text-center p-2">
@@ -50,7 +51,7 @@ const Banner = () => {
           <div className="flex flex-col-reverse lg:flex-row-reverse justify-around items-center">
             <img
               src="https://i.postimg.cc/0NXdYrvf/slider-2-1.png"
-              className=""
+              className="h-[80vh]"
               alt="banner"
             />
             <div className="text-center p-2">
