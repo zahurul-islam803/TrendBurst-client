@@ -1,17 +1,23 @@
-import {
-  useQuery,} from "@tanstack/react-query";
+import {useQuery} from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
 import ProductCard from "./ProductCard";
 import { getAllProduct } from "../../Api/product";
+import { useState } from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 const Products = () => {
+  const loading = false;
+  const [category, setCategory] = useState('');
+  const [tabIndex, setTabIndex] = useState(0);
   const {
     data: products = [],
     isLoading,
     isError,
     error,
   } = useQuery({
-    queryKey: ["product"],
-    queryFn: getAllProduct,
+    queryKey: ["product", category],
+    enabled: !loading,
+    queryFn: async() => await getAllProduct(category),
   });
 
   if (isLoading) {
@@ -21,7 +27,7 @@ const Products = () => {
     return console.log(isError, error);
   }
   return (
-    <div>
+    <div className="px-2">
       <Helmet>
         <title>TrendBurst - Products</title>
       </Helmet>
@@ -31,11 +37,42 @@ const Products = () => {
       <p className="text-center text-2xl mb-8 text-rose-400">
         --------------------------------------
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-screen-xl mx-auto p-2">
-        {products?.map((product, index) => (
-          <ProductCard key={index} product={product}></ProductCard>
-        ))}
-      </div>
+      <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+        <TabList>
+          <Tab onClick={() => setCategory("")}>All</Tab>
+          <Tab onClick={() => setCategory("men")}>Men</Tab>
+          <Tab onClick={() => setCategory("woman")}>Woman</Tab>
+          <Tab onClick={() => setCategory("kids")}>Kids</Tab>
+        </TabList>
+        <TabPanel>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-screen-xl mx-auto p-2 mt-4">
+            {products?.map((product, index) => (
+              <ProductCard key={index} product={product}></ProductCard>
+            ))}
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-screen-xl mx-auto p-2 mt-4">
+            {products?.map((product, index) => (
+              <ProductCard key={index} product={product}></ProductCard>
+            ))}
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-screen-xl mx-auto p-2 mt-4">
+            {products?.map((product, index) => (
+              <ProductCard key={index} product={product}></ProductCard>
+            ))}
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-screen-xl mx-auto p-2 mt-4">
+            {products?.map((product, index) => (
+              <ProductCard key={index} product={product}></ProductCard>
+            ))}
+          </div>
+        </TabPanel>
+      </Tabs>
     </div>
   );
 };
