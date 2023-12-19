@@ -4,7 +4,7 @@ import Countdown from "react-countdown";
 const Deals = () => {  
   return (
     <div
-      className="flex justify-evenly items-center gap-6 py-20 w-full my-8"
+      className="md:flex justify-evenly items-center gap-6 py-20 w-full my-8"
       style={{
         backgroundImage: "url(https://i.ibb.co/SrkRkm8/deal-bg-2.jpg)",
         backgroundPosition: "center",
