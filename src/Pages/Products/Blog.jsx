@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import BlogCard from "./BlogCard";
 
 const Blog = () => {
   return (
@@ -12,6 +13,10 @@ const Blog = () => {
       <p className="text-center text-2xl mb-8 text-rose-400">
         --------------------------------------
       </p>
+      <div>
+        <p className="text-center mb-8">This is a Fashion Blog section. Chose and collect this item.</p>
+        <BlogCard></BlogCard>
+      </div>
     </div>
   );
 };
