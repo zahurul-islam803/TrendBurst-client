@@ -88,7 +88,7 @@ const BlogCard = () => {
               </div>
             </div>
           </div>
-          <div className="card w-96 bg-rose-100">
+          <div className="card w-96 bg-rose-100 mr-6">
             <figure>
               <img
                 src="https://i.ibb.co/Yyt3xgw/2.jpg"
