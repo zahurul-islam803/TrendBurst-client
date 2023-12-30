@@ -1,3 +1,4 @@
+import Marquee from "react-fast-marquee";
 import { Helmet } from "react-helmet-async";
 import { FaFacebookF, FaTwitter, FaPinterestP } from "react-icons/fa";
 import { IoCardOutline } from "react-icons/io5";
@@ -192,6 +193,22 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+        <Marquee
+          pauseOnHover={true}
+          className="max-w-screen-xl mx-auto py-14 border-t-2"
+        >
+          <div className="flex justify-evenly items-center gap-36">
+            <img src="https://i.ibb.co/cD9w0F1/2.png" alt="brand logo image" />
+            <img src="https://i.ibb.co/mDgqyt3/3.png" alt="brand logo image" />
+            <img src="https://i.ibb.co/wzbYvfS/4.png" alt="brand logo image" />
+            <img src="https://i.ibb.co/khJcPF5/1.png" alt="brand logo image" />
+            <img
+              src="https://i.ibb.co/BB4MVRW/5.png"
+              className="mr-36 lg:mr-0"
+              alt="brand logo image"
+            />
+          </div>
+        </Marquee>
     </>
   );
 };
