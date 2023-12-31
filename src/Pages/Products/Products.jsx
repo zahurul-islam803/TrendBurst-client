@@ -31,7 +31,7 @@ const Products = () => {
       <Helmet>
         <title>TrendBurst - Products</title>
       </Helmet>
-      <h1 className="mt-8 text-rose-500 text-center text-6xl font-extrabold">
+      <h1 className="mt-24 text-rose-500 text-center text-6xl font-extrabold">
         products
       </h1>
       <p className="text-center text-2xl mb-8 text-rose-400">
