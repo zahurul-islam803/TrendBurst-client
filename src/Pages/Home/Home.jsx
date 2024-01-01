@@ -6,7 +6,7 @@ import Products from "../Products/Products";
 const Home = () => {
   return (
     <>
-      <div className="mt-[90px]">
+      <div className="mt-[86px]">
         <Banner></Banner>
       </div>
       <div>
