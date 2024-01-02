@@ -29,7 +29,6 @@ const Registration = () => {
       toast.error(err?.message);
     }
   };
-
   // google sign in
   const handleGoogleSignIn = async () => {
     try {
@@ -154,7 +153,6 @@ const Registration = () => {
             >
               Login
             </Link>
-            .
           </p>
         </div>
       </div>
