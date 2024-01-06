@@ -35,7 +35,12 @@ const Banner = () => {
               className="h-[80vh]"
               alt="banner"
             />
-            <div className="text-center p-2">
+            <div
+              className="text-center p-2"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+            >
               <p className="text-lg text-gray-600 border-l-4 border-rose-500 mb-4 uppercase">
                 Sale 30% off
               </p>
@@ -58,7 +63,12 @@ const Banner = () => {
               className="h-[80vh]"
               alt="banner"
             />
-            <div className="text-center p-2">
+            <div
+              className="text-center p-2"
+              data-aos="fade-up"
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+            >
               <p className="text-lg text-gray-600 border-l-4 border-rose-500 mb-4 uppercase">
                 Sale 30% off
               </p>
