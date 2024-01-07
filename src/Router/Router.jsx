@@ -8,6 +8,9 @@ import ContactUs from "../Pages/ContactUs";
 import AboutUs from "../Pages/AboutUs";
 import Registration from "../Pages/Authentication/Registration";
 import Login from "../Pages/Authentication/Login";
+import PrivateRoute from "./PrivateRoute";
+import ProductDetails from "../Pages/Products/ProductDetails";
+import { getSingleProduct } from "../Api/product";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +37,11 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <AboutUs></AboutUs>,
+      },
+      {
+        path: "product/:id",
+        element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
+        loader: ({params}) => getSingleProduct(params.id),
       },
     ],
   },
