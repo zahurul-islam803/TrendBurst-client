@@ -10,3 +10,9 @@ export const getSingleProduct = async (id) => {
   const {data} = await axiosSecure.get(`/products/${id}`);
   return data;
 }
+
+// post data to the cart
+export const addToCart = async (cartItem) =>{
+  const {data} = await axiosSecure.post(`/products/cart`, cartItem);
+  return data;
+}
