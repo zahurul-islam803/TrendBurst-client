@@ -1,4 +1,5 @@
 import axiosSecure from './index'
+
 // get all product data
 export const getAllProduct = async (category) => {
   const { data } = await axiosSecure.get(`/products?category=${category}`);
@@ -16,3 +17,4 @@ export const addToCart = async (cartItem) =>{
   const {data} = await axiosSecure.post(`/products/cart`, cartItem);
   return data;
 }
+

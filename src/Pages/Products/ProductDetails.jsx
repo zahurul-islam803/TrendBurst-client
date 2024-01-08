@@ -41,13 +41,21 @@ const ProductDetails = () => {
         </figure>
         <div className="flex-1 space-y-4">
           <h2 className="text-3xl font-semibold">{product.product_name}</h2>
-          <h2 className="text-rose-500 text-2xl font-medium">
-            ${product.price}
-          </h2>
+          <div className="flex gap-6">
+            <h2 className="text-2xl font-medium">
+              Price: ${product.price}
+            </h2>
+            <h2 className="text-rose-500 text-2xl font-medium">
+             Discount: ${product.discount}
+            </h2>
+          </div>
           <h2>({product.review} customer review)</h2>
           <p>{product.description}</p>
           <div className="flex">
-            <button onClick={handleAddToCart} className="btn btn-wide bg-black text-white hover:bg-rose-500">
+            <button
+              onClick={handleAddToCart}
+              className="btn btn-wide bg-black text-white hover:bg-rose-500"
+            >
               Add To Cart
             </button>
             <button className="btn bg-black hover:bg-rose-500 text-white">
