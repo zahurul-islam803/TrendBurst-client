@@ -6,6 +6,7 @@ import useCart from "../../Hooks/useCart";
 
 const UserNav = () => {
   const [refetch, cart] = useCart();
+  refetch()
   return (
     <>
       <div className="flex justify-center gap-3 items-center mr-4">
