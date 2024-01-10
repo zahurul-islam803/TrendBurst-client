@@ -18,3 +18,8 @@ export const addToCart = async (cartItem) =>{
   return data;
 }
 
+// delete cart item
+export const deleteCart = async (id) => {
+  const {data} = await axiosSecure.delete(`/carts/${id}`);
+  return data;
+}
