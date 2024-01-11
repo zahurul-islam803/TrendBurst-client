@@ -5,6 +5,7 @@ import { getAllProduct } from "../../Api/product";
 import { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import Loader from "../../Shared/Loader";
 const Products = () => {
   const loading = false;
   const [category, setCategory] = useState('');
@@ -21,7 +22,7 @@ const Products = () => {
   });
 
   if (isLoading) {
-    return <h1>loading</h1>;
+    return <Loader></Loader>;
   }
   if (isError) {
     return console.log(isError, error);
