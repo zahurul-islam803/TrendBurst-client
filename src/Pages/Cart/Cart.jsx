@@ -1,13 +1,40 @@
 import { Helmet } from "react-helmet-async";
+import { Country, State, City } from "country-state-city";
 import useCart from "../../Hooks/useCart";
 import { RxCross2 } from "react-icons/rx";
 import Swal from 'sweetalert2'
 import { deleteCart } from "../../Api/product";
 import useAuth from "../../Hooks/useAuth";
 import Loader from "../../Shared/Loader";
+import Selector from "../../Shared/Selector";
+import { useEffect, useState } from "react";
 const Cart = () => {
   const [refetch, cart] = useCart();
   const {loading} = useAuth();
+  let countryData = Country.getAllCountries();
+  const [stateData, setStateData] = useState();
+  const [cityData, setCityData] = useState();
+
+  const [country, setCountry] = useState(countryData[0]);
+  const [state, setState] = useState();
+  const [city, setCity] = useState();
+
+  useEffect(()=>{
+    setStateData(State.getStatesOfCountry(country?.isoCode));
+  },[country])
+
+  useEffect(()=>{
+    setCityData(City.getCitiesOfState(country?.isoCode, state?.isoCode));
+  },[state])
+
+  useEffect(()=>{
+    stateData && setState(stateData[0]);
+  },[stateData])
+
+  useEffect(()=>{
+    cityData && setCity(cityData[0]);
+  },[cityData])
+
   const handleDelete = (id)=>{
     Swal.fire({
   title: "Are you sure?",
@@ -86,6 +113,43 @@ const Cart = () => {
                 ))}
               </tbody>
             </table>
+            {/* shipping info */}
+            <div className="mt-10 mb-80">
+              <div className="bg-gray-200 p-4 space-y-6">
+                <h1 className="text-black text-xl font-semibold">
+                  Estimate Shipping And Tax
+                </h1>
+                <p>Enter your destination to get a shipping estimate.</p>
+                <div>
+                  <p className="text-black font-medium">Country*</p>
+                  <Selector
+                    data={countryData}
+                    selected={country}
+                    setSelected={setCountry}
+                  ></Selector>
+                </div>
+                {state && (
+                  <div>
+                    <p className="text-black font-medium">State*</p>
+                    <Selector
+                      data={stateData}
+                      selected={state}
+                      setSelected={setState}
+                    ></Selector>
+                  </div>
+                )}
+                {city && (
+                  <div>
+                    <p className="text-black font-medium">City*</p>
+                    <Selector
+                      data={cityData}
+                      selected={city}
+                      setSelected={setCity}
+                    ></Selector>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         )}
       </>
