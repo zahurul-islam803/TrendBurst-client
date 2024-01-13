@@ -115,39 +115,68 @@ const Cart = () => {
             </table>
             {/* shipping info */}
             <div className="mt-10 mb-80">
-              <div className="bg-gray-200 p-4 space-y-6">
-                <h1 className="text-black text-xl font-semibold">
-                  Estimate Shipping And Tax
-                </h1>
-                <p>Enter your destination to get a shipping estimate.</p>
-                <div>
-                  <p className="text-black font-medium">Country*</p>
-                  <Selector
-                    data={countryData}
-                    selected={country}
-                    setSelected={setCountry}
-                  ></Selector>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="bg-gray-200 px-4 py-12 space-y-6">
+                  <h1 className="text-black text-xl font-semibold border-b border-gray-300">
+                    Estimate Shipping And Tax
+                  </h1>
+                  <p>Enter your destination to get a shipping estimate.</p>
+                  <div>
+                    <p className="text-black font-medium">Country*</p>
+                    <Selector
+                      data={countryData}
+                      selected={country}
+                      setSelected={setCountry}
+                    ></Selector>
+                  </div>
+                  {state && (
+                    <div>
+                      <p className="text-black font-medium">State*</p>
+                      <Selector
+                        data={stateData}
+                        selected={state}
+                        setSelected={setState}
+                      ></Selector>
+                    </div>
+                  )}
+                  {city && (
+                    <div>
+                      <p className="text-black font-medium">City*</p>
+                      <Selector
+                        data={cityData}
+                        selected={city}
+                        setSelected={setCity}
+                      ></Selector>
+                    </div>
+                  )}
+                  <div>
+                    <p className="text-black font-medium">Zip Code*</p>
+                    <input type="text" className="input w-full max-w-[285px]" />
+                  </div>
+                  <button className="btn btn-wide bg-rose-500 hover:bg-black text-white uppercase">
+                    Get Quote
+                  </button>
                 </div>
-                {state && (
-                  <div>
-                    <p className="text-black font-medium">State*</p>
-                    <Selector
-                      data={stateData}
-                      selected={state}
-                      setSelected={setState}
-                    ></Selector>
-                  </div>
-                )}
-                {city && (
-                  <div>
-                    <p className="text-black font-medium">City*</p>
-                    <Selector
-                      data={cityData}
-                      selected={city}
-                      setSelected={setCity}
-                    ></Selector>
-                  </div>
-                )}
+                <div className="bg-gray-200 px-4 py-12 space-y-6 max-h-[320px]">
+                  <h1 className="text-black text-xl font-semibold border-b border-gray-300">
+                    Use coupon code
+                  </h1>
+                  <p>Enter your coupon code if you have one.</p>
+                  <input type="text" className="input w-full max-w-[285px]" />
+                  <br />
+                  <button className="btn btn-wide bg-rose-500 hover:bg-black text-white uppercase">
+                    Apply coupon
+                  </button>
+                </div>
+                <div className="bg-gray-200 px-4 py-12 space-y-6">
+                  <h1 className="text-black text-xl font-semibold border-b border-gray-300">
+                    Cart Total
+                  </h1>
+                  <br />
+                  <button className="btn btn-wide bg-rose-500 hover:bg-black text-white uppercase">
+                    proceed to checkout
+                  </button>
+                </div>
               </div>
             </div>
           </div>
