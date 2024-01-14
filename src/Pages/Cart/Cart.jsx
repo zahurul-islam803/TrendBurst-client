@@ -8,6 +8,7 @@ import useAuth from "../../Hooks/useAuth";
 import Loader from "../../Shared/Loader";
 import Selector from "../../Shared/Selector";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const Cart = () => {
   const [refetch, cart] = useCart();
   const {loading} = useAuth();
@@ -172,10 +173,16 @@ const Cart = () => {
                   <h1 className="text-black text-xl font-semibold border-b border-gray-300">
                     Cart Total
                   </h1>
+                    <div className="flex justify-between items-center">
+                      <p>Total Products</p>
+                      <p className="text-xl font-semibold">3</p>
+                    </div>
                   <br />
-                  <button className="btn btn-wide bg-rose-500 hover:bg-black text-white uppercase">
-                    proceed to checkout
-                  </button>
+                  <Link to={'/checkOut'}>
+                    <button className="btn btn-wide bg-rose-500 hover:bg-black text-white uppercase">
+                      proceed to checkout
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
