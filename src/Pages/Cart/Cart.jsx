@@ -169,16 +169,46 @@ const Cart = () => {
                     Apply coupon
                   </button>
                 </div>
-                <div className="bg-gray-200 px-4 py-12 space-y-6">
+                <div className="bg-gray-200 px-4 py-12 space-y-6 max-h-[370px]">
                   <h1 className="text-black text-xl font-semibold border-b border-gray-300">
                     Cart Total
                   </h1>
+                  <div className="flex justify-between items-center">
+                    <p>Total Products</p>
+                    <p className="text-xl font-semibold">{cart.length}</p>
+                  </div>
+                  <div>
                     <div className="flex justify-between items-center">
-                      <p>Total Products</p>
-                      <p className="text-xl font-semibold">3</p>
+                      <div>
+                        <input
+                          type="checkbox"
+                          name="check"
+                          id="check"
+                          className="mr-2"
+                        />
+                        <label htmlFor="">Standard</label>
+                      </div>
+                      <p>$20.00</p>
                     </div>
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <input
+                          type="checkbox"
+                          name="check"
+                          id="check"
+                          className="mr-2"
+                        />
+                        <label htmlFor="">Express</label>
+                      </div>
+                      <p>$30.00</p>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center text-rose-500 text-xl">
+                    <p>Grand Total</p>
+                    <p className="text-xl font-semibold">$260.00</p>
+                  </div>
                   <br />
-                  <Link to={'/checkOut'}>
+                  <Link to={"/checkOut"}>
                     <button className="btn btn-wide bg-rose-500 hover:bg-black text-white uppercase">
                       proceed to checkout
                     </button>
