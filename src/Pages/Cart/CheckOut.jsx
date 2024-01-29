@@ -6,7 +6,7 @@ const CheckOut = () => {
       <Helmet>
         <title>TrendBurst - Cart</title>
       </Helmet>
-      <div className="flex justify-center items-center max-w-screen-xl mx-auto text-rose-500 font-extrabold">
+      <div className="flex justify-center items-center max-w-screen-xl mx-auto h-[100vh] text-rose-500 text-6xl font-extrabold">
         <h1>Working on this page</h1>
       </div>
     </div>
